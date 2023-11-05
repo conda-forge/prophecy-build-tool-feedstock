@@ -40,6 +40,7 @@ test:
   imports:
     - pbt
   commands:
+    - pip check
     - pbt --help
   requires:
     - pip
