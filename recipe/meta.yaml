@@ -14,7 +14,7 @@ build:
     - pbt = pbt:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -28,12 +28,12 @@ requirements:
     - rich >=12.5.1
     - wheel
     - python-build
-    - pyspark ==3.3.0
+    - pyspark >=3.3.0,<3.4.0
     - google-cloud-secret-manager ==2.16.2
     - google-cloud-storage ==2.10.0
     - pydantic >=1.10,<2.0
     - pydantic-yaml ==1.1.1
-    - boto3 >=1.26.157,<1.27.0
+    - boto3 >=1.26.157,<1.27.0 #<1.29.0
     - tenacity ==8.2.3
 
 test:
