@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prophecy_build_tool-{{ version }}.tar.gz
   sha256: 8e1ae727e12b7ee052d174952127b6eeea022da9fff50008d3103979b2aba8bd
 
 build:
   entry_points:
     - pbt = pbt:main
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -28,12 +28,12 @@ requirements:
     - rich >=12.5.1
     - wheel
     - python-build
-    - pyspark >=3.3.0,<3.4.0
+    #- pyspark >=3.3.0,<3.4.0
     - google-cloud-secret-manager ==2.16.2
     - google-cloud-storage ==2.10.0
     - pydantic >=1.10,<2.0
     - pydantic-yaml ==1.1.1
-    - boto3 >=1.26.157,<1.27.0 #<1.29.0
+    - boto3 >=1.26.157,<1.27.0
     - tenacity ==8.2.3
 
 test:
