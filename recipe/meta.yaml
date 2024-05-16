@@ -28,7 +28,7 @@ requirements:
     - rich >=12.5.1
     - wheel
     - python-build
-    #- pyspark >=3.3.0,<3.4.0
+    - pyspark >=3.3.0,<3.4.0
     - google-cloud-secret-manager ==2.16.2
     - google-cloud-storage ==2.10.0
     - pydantic >=1.10,<2.0
