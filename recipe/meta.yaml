@@ -1,5 +1,5 @@
 {% set name = "prophecy-build-tool" %}
-{% set version = "1.2.15" %}
+{% set version = "1.2.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5251088b9974c3c2a0f709075e6fd73aa3be1d7229e588d4c658b2f30f20f7c7
+  sha256: f436540bba1d03a522330a6407dbf423cf2f224df2155edbf769c05c32dd1145
 
 build:
   entry_points:
