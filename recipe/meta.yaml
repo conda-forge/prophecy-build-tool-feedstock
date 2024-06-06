@@ -1,5 +1,5 @@
 {% set name = "prophecy-build-tool" %}
-{% set version = "1.2.17" %}
+{% set version = "1.2.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 303adb300ed5dd2640dd8111ea6594c8e4718140df55165729613b07719d818b
+  sha256: d2ed66a2994d5850f209d0fc8e865c6289f9f95ebf756d00bb4ff7c129edd17d
 
 build:
   entry_points:
@@ -33,7 +33,7 @@ requirements:
     - google-cloud-storage ==2.10.0
     - pydantic >=1.10,<2.0
     - pydantic-yaml ==1.1.1
-    - boto3 >=1.26.157,<1.27.0 #<1.29.0
+    - boto3 >=1.34.120,<1.35.0 #<1.29.0
     - tenacity ==8.2.3
     - click >=8.1.3
 
