@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: fd30197cf646283cf1c3c7ee63d736d6768a76d5a55a46d0011413673af21d83
 
 build:
@@ -14,14 +14,14 @@ build:
     - pbt = pbt:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - requests >=2.28.0
     - pyyaml >=6.0
     - databricks-cli >=0.17.7,<=0.18.0
@@ -45,6 +45,7 @@ test:
     - pbt --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/SimpleDataLabsInc/prophecy-build-tool
