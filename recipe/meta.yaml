@@ -38,6 +38,7 @@ requirements:
     - gitpython
     - semver
     - twine
+    - click
 
 test:
   imports:
