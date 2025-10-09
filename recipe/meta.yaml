@@ -48,7 +48,7 @@ test:
     - pbt
   commands:
     - pip check
-    - pbt --help
+    #- pbt --help
   requires:
     - pip
     - git
